@@ -176,13 +176,13 @@ class LocalReleaseNotesGenerator:
         date = datetime.now().strftime("%Y-%m-%d")
         output = [
             f"## {self.target_tag} - {date}\n",
-            "### 🚀 New Features",
+            "###  New Features",
             *[f"- {item['text']} (by {item['author']})" for item in categories["features"]],
-            "\n### 🐛 Bug Fixes",
+            "\n###  Bug Fixes",
             *[f"- {item['text']}" for item in categories["bug_fixes"]],
-            "\n### ⚠️ Breaking Changes",
+            "\n###  Breaking Changes",
             *[f"- {item['text']}" for item in categories["breaking_changes"]],
-            "\n### 🔧 Maintenance",
+            "\n###  Maintenance",
             *[f"- {item['text']}" for item in categories["maintenance"]],
         ]
         return "\n".join(output)
